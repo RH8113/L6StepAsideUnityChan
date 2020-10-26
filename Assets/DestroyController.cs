@@ -3,19 +3,20 @@ using UnityEngine;
 
 public class DestroyController : MonoBehaviour
 {
-    private float deadLine = -1;
 
     void Start()
     {
         
+     
     }
 
-    
     void Update()
     {
-        if(transform.position.z < this.deadLine)
+
+        if(transform.position.z < Camera.main.transform.position.z)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
+    
 }
